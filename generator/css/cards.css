@@ -197,6 +197,10 @@
 }
 
 .card-fill {flex:1;}
+.card-description-center {
+    display: flex;
+    justify-content: center;
+}
 
 .card-description-line {
     margin-top: 0.5em;
