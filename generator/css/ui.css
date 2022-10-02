@@ -56,6 +56,16 @@
     /* Revert bootstrap style for the card preview */
     font-weight: bold;
 }
+.card h2 {
+    /* Revert bootstrap style for the card preview */    
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
 
 .form-horizontal {
     margin-top: 10px;

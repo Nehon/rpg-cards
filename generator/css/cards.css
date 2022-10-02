@@ -7,6 +7,7 @@
     font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
     font-size: 8pt;
     overflow: hidden;
+    margin-bottom: 1px;
 }
 
 .card.rounded-corners {
@@ -70,8 +71,8 @@
     position: absolute;
     right: -1mm;
     top: -1mm;
-    border: 1mm solid;
-    border-radius: 1mm;
+    border: 1.1mm solid;
+    border-radius: 1.8mm;
     background-color: inherit;
     border-color: inherit;
 }
@@ -207,6 +208,7 @@
     margin-bottom: 0.0em;
     font-size: inherit;
     color: black;
+    text-align: justify;
 }
 .card-description-name {
     display: inline;
