@@ -495,12 +495,14 @@ function card_pages_wrap(pages, options) {
     var result = "";
     for (var i = 0; i < pages.length; ++i) {
         var style = "";
+        var styleClass = "";
         if ((options.card_arrangement === "doublesided") &&  (i % 2 === 1)) {
             style += 'style="background-color:' + options.background_color + '"';
+            styleClass = " page-back";
         } else {
             style += 'style="background-color:' + options.foreground_color + '"';
         }
-        result += '<page class="page page-preview" size="' + size + '" ' + style + '>\n';
+        result += '<page class="page page-preview' + styleClass + '" size="' + size + '" ' + style + '>\n';
         result += pages[i].join("\n");
         result += '</page>\n';
     }

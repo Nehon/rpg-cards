@@ -13,6 +13,9 @@ body {
     margin-bottom: 16px;
     box-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
+.page-back .card:nth-of-type(4n+1) {
+  margin-left:-5px;
+}
 
 @media print {
   .page-preview {
@@ -39,5 +42,5 @@ body {
   margin-block-end: 5px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold;
+  font-weight: normal;
 }
