@@ -9,13 +9,13 @@ function card_default_options() {
         default_icon: "ace",
         default_title_size: "13",
         page_size: "A4",
-        page_rows: 3,
-        page_columns: 3,
+        page_rows: 4,
+        page_columns: 4,
         card_arrangement: "doublesided",
         card_size: "25x35",
         card_count: null,
-        icon_inline: true,
-        rounded_corners: true
+        icon_inline: false,
+        rounded_corners: false
     };
 }
 
@@ -170,6 +170,23 @@ function card_element_property(params, card_data, options) {
     return result;
 }
 
+// skill | icon | icon size | title | text
+function card_element_skill(params, card_data, options) {
+    var result = "";
+    result += '<div class="card-element card-skill-line">';
+    var icon = params[0] || "";
+    var size = params[1] || "40";
+    var align = "left";
+    var color = card_data_color_front(card_data, options);
+    result += '<div class="card-element card-inline-icon card-skill-icon align-' + align + ' icon-' + icon + '" style ="height:' + size + 'px;min-height:' + size + 'px;width: ' + size + 'px;background-color: ' + color + '"></div>';
+    if( params[2] && params[2].trim() !== ""){
+        result += '<h4 class="card-description-name">' + params[2] + '</h4>';
+    }
+    result += '   <p class="card-p card-description-text">' + params[3] + '</p>';
+    result += '</div>';
+    return result;
+}
+
 function card_element_description(params, card_data, options) {
     var result = "";
     result += '<div class="card-element card-description-line">';
@@ -303,6 +320,7 @@ function card_element_empty(params, card_data, options) {
 var card_element_generators = {
     subtitle: card_element_subtitle,
     property: card_element_property,
+    skill: card_element_skill,
     rule: card_element_ruler,
     ruler: card_element_ruler,
     boxes: card_element_boxes,

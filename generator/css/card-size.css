@@ -76,12 +76,14 @@ page[size="25x35"] {
 
 /* Poker / Magic card size */
 .card-size-25x35 {
-    width:2.5in;
-    height:3.5in;
+    width: 47.5mm;
+    /*2.5in;*/
+    height: 66.25mm;
+    /*3.5in;*/
 }
 .card-size-25x35 .card-back-icon {
-    width: 1in;
-    height: 1in;
+    width: 20mm;
+    height: 20mm;
 }
 
 /* Poker / Magic card size */
